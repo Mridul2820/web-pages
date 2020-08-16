@@ -21,7 +21,6 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Open Sans Condensed', sans-serif;
-            background: #fffde7;
         }
 
         body {
@@ -29,6 +28,13 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.4), 
+                rgba(0, 0, 0, 0.4)
+                ), url(assets/coding-maestros.jpg);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
         }
 
         .searchBox {
@@ -99,7 +105,7 @@
             grid-column: span 4;
             padding: .5rem;
             font-size: 3rem;
-            color: #e65100;
+            color: #fdd835;
         }
 
         @media only screen and (max-width: 70em) {
@@ -126,6 +132,7 @@
             align-items: center;
             border: 3px solid #1b5e20;
             transition: all .2s;
+            background: #fffde7;
         }
 
         .container .page:hover{
