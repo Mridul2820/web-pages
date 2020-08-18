@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  background: #222;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 100px;
+  z-index: 1000;
+}
+
+@media only screen and (max-width: 37.5em) {
+  header {
+    padding: 40px 50px;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  header {
+    padding: 30px;
+  }
+}
+
+header .logo {
+  position: relative;
+  font-size: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 30em) {
+  header .logo {
+    font-size: 1.8em;
+  }
+}
+
+header .toggle {
+  color: #fff;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 30em) {
+  header .toggle {
+    font-size: .8em;
+  }
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  display: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 75em) {
+  .banner {
+    padding: 0 50px;
+  }
+}
+
+@media only screen and (max-width: 62em) {
+  .banner {
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .banner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 125px 50px 120px 50px;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .banner {
+    padding: 100px 30px 120px 30px;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .banner {
+    padding: 100px 20px 120px 20px;
+  }
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 35%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 50em) {
+  .banner::before {
+    width: 45%;
+  }
+}
+
+.banner video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: .4;
+  pointer-events: none;
+}
+
+.banner .textBox {
+  position: relative;
+  width: 550px;
+  min-width: 450px;
+  z-index: 2;
+}
+
+@media only screen and (min-width: 88em) {
+  .banner .textBox {
+    min-width: 600px;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  .banner .textBox {
+    width: 450px;
+    min-width: 350px;
+  }
+}
+
+@media only screen and (max-width: 62em) {
+  .banner .textBox {
+    width: 400px;
+    min-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .banner .textBox {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .banner .textBox {
+    width: 100%;
+  }
+}
+
+.banner .textBox h2 {
+  color: #fff;
+  font-size: 2.8em;
+}
+
+@media only screen and (max-width: 75em) {
+  .banner .textBox h2 {
+    font-size: 2.5em;
+  }
+}
+
+@media only screen and (max-width: 62em) {
+  .banner .textBox h2 {
+    font-size: 2.2em;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .banner .textBox h2 {
+    font-size: 1.8em;
+  }
+}
+
+.banner .textBox p {
+  color: #fff;
+  font-size: 1.1em;
+  margin: 5px 0 25px;
+}
+
+@media only screen and (max-width: 62em) {
+  .banner .textBox p {
+    font-size: 1em;
+  }
+}
+
+.banner .textBox a {
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  color: #111;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.banner .videoBox {
+  position: relative;
+  margin-left: 40px;
+  width: 100%;
+  height: 400px;
+  background: #fff;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 75em) {
+  .banner .videoBox {
+    height: 360px;
+  }
+}
+
+@media only screen and (max-width: 62em) {
+  .banner .videoBox {
+    height: 320px;
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .banner .videoBox {
+    margin-left: 0;
+    margin-top: 40px;
+    height: 380px;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .banner .videoBox {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .banner .videoBox {
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .banner .videoBox {
+    height: 200px;
+  }
+}
+
+.banner .videoBox video {
+  opacity: 1;
+}
+
+.banner .social {
+  position: absolute;
+  bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+}
+
+@media only screen and (max-width: 50em) {
+  .banner .social {
+    bottom: 30px;
+  }
+}
+
+.banner .social li {
+  margin: 0 40px;
+  list-style: none;
+}
+
+@media only screen and (max-width: 30em) {
+  .banner .social li {
+    margin: 0 25px;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .banner .social li {
+    margin: 0 15px;
+  }
+}
+
+.banner .social li a {
+  text-decoration: none;
+  display: inline-block;
+  color: #ccc;
+  margin-right: 15px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.banner .social li a .fab {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.banner .social li a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.banner .social li a:hover .fa-facebook-square {
+  color: #3b5999;
+}
+
+.banner .social li a:hover .fa-instagram-square {
+  color: #e4405f;
+}
+
+.banner .social li a:hover .fa-twitter-square {
+  color: #55acee;
+}
+
+.loading-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}

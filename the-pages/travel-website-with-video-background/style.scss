@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap');
+
+// Responsive Breakpoint
+$bp-largest: 88em;      //1408px
+$bp-larger: 75em;       //1200px
+$bp-large: 62em;        //992px
+$bp-medium: 50em;       //800px
+$bp-small: 37.5em;      //600px
+$bp-smaller: 30em;      //480px
+$bp-smallest: 25em;     //400px
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+body {
+    background: #222;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+
+    @media only screen and (max-width: $bp-small){
+        padding: 40px 50px;
+    }
+
+    @media only screen and (max-width: $bp-smaller){
+        padding: 30px;
+    }
+
+    .logo {
+        position: relative;
+        font-size: 2em;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-decoration: none;
+
+        @media only screen and (max-width: $bp-smaller){
+            font-size: 1.8em;
+        }
+    }
+
+    .toggle {
+        color: #fff;
+        cursor: pointer;
+
+        @media only screen and (max-width: $bp-smaller){
+            font-size: .8em;
+        }
+    }
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-larger){
+        padding: 0 50px;
+    }
+
+    @media only screen and (max-width: $bp-large){
+        padding: 0 30px;
+    }
+
+    @media only screen and (max-width: $bp-medium){
+        flex-direction: column;
+        padding: 125px 50px 120px 50px;
+    }
+
+    @media only screen and (max-width: $bp-smaller){
+        padding: 100px 30px 120px 30px;
+    }
+
+    @media only screen and (max-width: $bp-smallest){
+        padding: 100px 20px 120px 20px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 35%;
+        height: 100%;
+        background: rgba(0, 0, 0, .5);
+
+        @media only screen and (max-width: $bp-medium){
+            width: 45%;
+        }
+    }
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: .4;
+        pointer-events: none;
+    }
+
+    .textBox {
+        position: relative;
+        width: 550px;
+        min-width: 450px;
+        z-index: 2;
+
+        @media only screen and (min-width: $bp-largest){
+            min-width: 600px;
+        }
+
+        @media only screen and (max-width: $bp-larger){
+            width: 450px;
+            min-width: 350px;
+        }
+
+        @media only screen and (max-width: $bp-large){
+            width: 400px;
+            min-width: 300px;
+        }
+
+        @media only screen and (max-width: $bp-medium){
+            width: 90%;
+        }
+
+        @media only screen and (max-width: $bp-small){
+            width: 100%;
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 2.8em;
+
+            @media only screen and (max-width: $bp-larger){
+                font-size: 2.5em;
+            }
+
+            @media only screen and (max-width: $bp-large){
+                font-size: 2.2em;
+            }
+
+            @media only screen and (max-width: $bp-smaller){
+                font-size: 1.8em;
+            }
+        }
+
+        p {
+            color: #fff;
+            font-size: 1.1em;
+            margin: 5px 0 25px;
+
+            @media only screen and (max-width: $bp-large){
+                font-size: 1em;
+            }
+        }
+
+        a {
+            position: relative;
+            display: inline-block;
+            background: #fff;
+            color: #111;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+    }
+
+    .videoBox {
+        position: relative;
+        margin-left: 40px;
+        width: 100%;
+        height: 400px;
+        background: #fff;
+        z-index: 1;
+
+        @media only screen and (max-width: $bp-larger){
+            height: 360px;
+        }
+
+        @media only screen and (max-width: $bp-large){
+            height: 320px;
+            margin-left: 20px;
+        }
+
+        @media only screen and (max-width: $bp-medium){
+            margin-left: 0;
+            margin-top: 40px;
+            height: 380px;
+        }
+
+        @media only screen and (max-width: $bp-small){
+            height: 300px;
+        }
+
+        @media only screen and (max-width: $bp-smaller){
+            height: 250px;
+        }
+
+        @media only screen and (max-width: $bp-smallest){
+            height: 200px;
+        }
+
+        video {
+            opacity: 1;
+        }
+    }
+
+    .social {
+        position: absolute;
+        bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+
+        @media only screen and (max-width: $bp-medium){
+            bottom: 30px;
+        }
+
+        li {
+            margin: 0 40px;
+            list-style: none;
+
+            @media only screen and (max-width: $bp-smaller){
+                margin: 0 25px;
+            }
+
+            @media only screen and (max-width: $bp-smallest){
+                margin: 0 15px;
+            }
+
+            a {
+                text-decoration: none;
+                display: inline-block;
+                color: #ccc;
+                margin-right: 15px;
+                transition: .5s;
+
+                .fab {
+                    transition: .5s;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+
+                    .fa-facebook-square {
+                        color: #3b5999;
+                    }
+
+                    .fa-instagram-square {
+                        color: #e4405f;
+                    }
+
+                    .fa-twitter-square {
+                        color: #55acee;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.loading-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
