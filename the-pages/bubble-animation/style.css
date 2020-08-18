@@ -19,6 +19,15 @@
   overflow: hidden;
 }
 
+@media only screen and (max-width: 25em) {
+  .container {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.5))), url(assets/background.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(assets/background.png);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
 .navbar {
   width: 85%;
   height: 15%;
@@ -39,6 +48,26 @@
   cursor: pointer;
 }
 
+@media only screen and (max-width: 25em) {
+  .navbar .logo {
+    width: 130px;
+    margin-left: -10px;
+  }
+}
+
+@media only screen and (max-width: 62em) {
+  .navbar .button-signup {
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 35em) {
+  .navbar .button-signup {
+    margin-right: 30px;
+    padding: 5px 15px;
+  }
+}
+
 .content {
   color: #fbfcfd;
   position: absolute;
@@ -47,6 +76,49 @@
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 2;
+}
+
+@media only screen and (max-width: 62em) {
+  .content {
+    left: 4%;
+  }
+}
+
+@media only screen and (max-width: 35em) {
+  .content h2 {
+    font-size: 18px;
+  }
+}
+
+.content .main-heading {
+  font-size: 80px;
+  margin: 10px 0 30px;
+  line-height: 80px;
+}
+
+@media only screen and (max-width: 62em) {
+  .content .main-heading {
+    font-size: 70px;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .content .main-heading {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 35em) {
+  .content .main-heading {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .content .main-heading {
+    font-size: 40px;
+    line-height: 50px;
+  }
 }
 
 .side-bar {
@@ -170,13 +242,7 @@
   width: 35px;
 }
 
-h1 {
-  font-size: 80px;
-  margin: 10px 0 30px;
-  line-height: 80px;
-}
-
-button {
+.button {
   color: #fbfcfd;
   padding: 8px 18px;
   background: transparent;
@@ -185,7 +251,7 @@ button {
   outline: none;
 }
 
-button:active {
+.button:active {
   outline: none;
 }
 
