@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+} 
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .6)), url(assets/background.png);
+    background-size: cover;
+    background-position: center;
+    padding: 0 8%;
+}
+
+.navbar {
+    height: 12%;
+    display: flex;
+    align-items: center;
+
+    .logo {
+        width: 50px;
+        cursor: pointer;
+    }
+
+    .menu-icon {
+        width: 30px;
+        cursor: pointer;
+        margin-left: 40px;
+    }
+
+    nav {
+        flex: 1;
+        text-align: right;
+
+        ul {
+            li {
+                list-style: none;
+                display: inline-block;
+                margin-left: 60px;
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+.row {
+    display: flex;
+    height: 88%;
+    align-items: center;
+
+    .col {
+        flex-basis: 50%;
+    }
+
+    .col-left {
+        h1 {
+            color: #eee;
+            font-size: 60px;
+        }
+
+        p {
+            color: #ccc;
+            font-size: 17px;
+            line-height: 20px;
+        }
+
+        button {
+            width: 140px;
+            color: #000;
+            font-size: 20px;
+            margin-top: 20px;
+            padding: 10px 0;
+            background: #ffffff;
+            outline: none;
+            border: none;
+            border-radius: 2px;
+            transition: all .5s;
+
+            &:hover {
+                background: #000;
+                color: #fff;
+            }
+        }
+    }
+
+    .col-right {
+        .card {
+            width: 200px;
+            height: 230px;
+            display: inline-block;
+            border-radius: 10px;
+            padding: 15px 25px;
+            cursor: pointer;
+            margin: 10px 15px;
+            transition: .5s;
+
+            &:hover {
+                transform: translateY(-10px) scale(1.05);
+            }
+            
+            h5 {
+                color: #fff;
+                text-shadow: 0 0 5px #999;
+            }
+
+            p {
+                color: #fff;
+                font-size: 13px;
+                text-shadow: 0 0 5px #999;
+            }
+        }
+
+        .card-1 {
+            background: url(assets/pic-1.png);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-2 {
+            background: url(assets/pic-2.png);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-3 {
+            background: url(assets/pic-3.png);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-4 {
+            background: url(assets/pic-4.png);
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}
+
