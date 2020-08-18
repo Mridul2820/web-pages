@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
 
+// Responsive Breakpoint
+$bp-large: 62em;        //992px
+$bp-medium: 50em;       //800px
+$bp-small: 32em;        //512px
+$bp-smallest: 25em;     //400px
+
 * {
     margin: 0;
     padding: 0;
@@ -9,14 +15,28 @@
 
 .container {
     width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .6)), url(assets/background.png);
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .6)), url(assets/background.png);
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     padding: 0 8%;
+
+    @media only screen and (max-width: $bp-large){
+        padding: 0 4%;
+    }
+
+    @media only screen and (max-width: $bp-medium){
+        padding: 0 8%;
+    }
+
+    @media only screen and (max-width: $bp-small){
+        padding: 0 4%;
+    }
 }
 
 .navbar {
+    padding: 20px 0 10px 0;
     height: 12%;
     display: flex;
     align-items: center;
@@ -42,6 +62,14 @@
                 display: inline-block;
                 margin-left: 60px;
 
+                @media only screen and (max-width: $bp-small){
+                    margin-left: 30px;
+                }
+
+                @media only screen and (max-width: $bp-smallest){
+                    margin-left: 15px;
+                }
+
                 a {
                     text-decoration: none;
                     color: #fff;
@@ -57,6 +85,10 @@
     height: 88%;
     align-items: center;
 
+    @media only screen and (max-width: $bp-medium){
+        flex-direction: column;
+    }
+
     .col {
         flex-basis: 50%;
     }
@@ -65,6 +97,10 @@
         h1 {
             color: #eee;
             font-size: 60px;
+
+            @media only screen and (max-width: $bp-small){
+                font-size: 40px;
+            }
         }
 
         p {
@@ -85,6 +121,11 @@
             border-radius: 2px;
             transition: all .5s;
 
+            @media only screen and (max-width: $bp-smallest){
+                width: 120px;
+                padding: 7px;
+            }
+
             &:hover {
                 background: #000;
                 color: #fff;
@@ -93,10 +134,26 @@
     }
 
     .col-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (max-width: $bp-medium){
+            margin-top: 40px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            @media only screen and (max-width: $bp-small){
+                grid-template-columns: 1fr;
+            }
+        }
+        
         .card {
             width: 200px;
             height: 230px;
-            display: inline-block;
             border-radius: 10px;
             padding: 15px 25px;
             cursor: pointer;
