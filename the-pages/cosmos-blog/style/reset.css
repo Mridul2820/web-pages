@@ -1,0 +1,32 @@
+:root {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  line-height: 24px;
+}
+
+@media only screen and (max-width: 50em) {
+  :root {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  :root {
+    font-size: 15px;
+  }
+}
+
+body,
+body * {
+  margin: unset;
+  -webkit-box-sizing: unset;
+          box-sizing: unset;
+  padding: unset;
+  font-size: unset;
+  color: unset;
+  text-decoration: unset;
+}
+
+figure * {
+  display: block;
+}

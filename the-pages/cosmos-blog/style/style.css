@@ -1,0 +1,132 @@
+article {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 50px [start] 120px 480px 120px [end] 50px 1fr;
+      grid-template-columns: 1fr 50px [start] 120px 480px 120px [end] 50px 1fr;
+  padding: 40px 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(252, 233, 60, 0.3)), color-stop(6.55rem, white));
+  background: linear-gradient(rgba(252, 233, 60, 0.3), white 6.55rem);
+}
+
+@media only screen and (max-width: 50em) {
+  article {
+    -ms-grid-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr;
+        grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr;
+  }
+}
+
+article * {
+  grid-column: start / end;
+}
+
+.debug-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.size-1 {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+}
+
+.size-2 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-column: 3 / 6;
+}
+
+.size-3 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 5;
+  grid-column: 2 / 7;
+}
+
+.size-4 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-column: 1 / 8;
+}
+
+.size-1 img,
+.size-1 img,
+.size-1 img,
+.size-1 img {
+  width: 100%;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+h2, p {
+  margin-bottom: 2.4em;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #545454;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #545454;
+}
+
+time {
+  font-weight: 700;
+  font-size: 1.0rem;
+  color: #5f3eff;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.0rem;
+  color: #7357ff;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 30px;
+  color: #545454;
+}
+
+a {
+  -webkit-box-shadow: inset 0 -3px #fff480;
+          box-shadow: inset 0 -3px #fff480;
+}
+
+.share {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.share img {
+  padding: 0.75rem;
+  width: 1.50rem;
+  height: 1.50rem;
+}
