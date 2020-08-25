@@ -1,0 +1,110 @@
+.nav-wrapper {
+  text-align: center;
+}
+
+@media only screen and (max-width: 37.5em) {
+  #post-heading {
+    font-size: 22px;
+  }
+}
+
+#blue-sky {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+@media only screen and (max-width: 72em) {
+  #blue-sky {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  #blue-sky {
+    padding: 20px;
+  }
+}
+
+#blue-sky .post {
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (max-width: 50em) {
+  #blue-sky .post {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  #blue-sky .post.post-2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: column-reverse;
+            flex-flow: column-reverse;
+  }
+}
+
+#blue-sky .post .post-image {
+  width: 400px;
+  height: 225px;
+  padding: 15px;
+  margin: 15px;
+  border: 2px solid #666;
+}
+
+@media only screen and (max-width: 62em) {
+  #blue-sky .post .post-image {
+    width: 336px;
+    height: 189px;
+  }
+}
+
+@media only screen and (max-width: 28em) {
+  #blue-sky .post .post-image {
+    width: 288px;
+    height: 162px;
+  }
+}
+
+#blue-sky .post .post-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#blue-sky .post .post-info {
+  width: 400px;
+  margin: 15px;
+}
+
+@media only screen and (max-width: 62em) {
+  #blue-sky .post .post-info {
+    width: 336px;
+  }
+}
+
+@media only screen and (max-width: 28em) {
+  #blue-sky .post .post-info {
+    width: 288px;
+    margin: 5px;
+  }
+}
+
+#blue-sky .post .post-info p {
+  padding-left: 10px;
+  border-left: 4px solid #2e7d32;
+}

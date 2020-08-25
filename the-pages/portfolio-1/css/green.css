@@ -1,0 +1,16 @@
+:root {
+    --primary-color: #606B56;
+    --secondary-color: #515a48;
+
+    --border-color: #161914;
+    --theme-dot-border: #fff;
+
+    --preview-background: rgba(81, 90, 72, 0.8);
+    --preview-shadow: #2a2f25;
+	--button-color: #669966;
+
+    --primary-text: #fff;
+    --secondary-text: #eeeeee;
+
+    --github-color: #fff;
+}
