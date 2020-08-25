@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap");
+:root {
+  --background: #641b4e;
+  --red: #f60f20;
+  --white: #fff;
+  --black: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  background: var(--background);
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+section {
+  position: relative;
+  padding: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+@media only screen and (max-width: 50em) {
+  section {
+    padding: 100px 40px;
+  }
+}
+
+@media only screen and (max-width: 38em) {
+  section {
+    padding: 100px 20px;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  section {
+    padding: 50px 20px;
+  }
+}
+
+section .logo {
+  position: fixed;
+  top: 30px;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 2em;
+  z-index: 100;
+  cursor: pointer;
+}
+
+section .bg {
+  position: absolute;
+  top: 0;
+  right: 60px;
+  height: 100%;
+}
+
+@media only screen and (max-width: 50em) {
+  section .bg {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    opacity: .7;
+  }
+}
+
+section .content {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+}
+
+@media only screen and (max-width: 50em) {
+  section .content {
+    max-width: 500px;
+  }
+}
+
+@media only screen and (max-width: 38em) {
+  section .content {
+    max-width: 400px;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  section .content {
+    max-width: 330px;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  section .content {
+    max-width: 300px;
+  }
+}
+
+section .content h2 {
+  color: var(--white);
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1.2em;
+}
+
+section .content h2 span {
+  font-size: 1.5em;
+}
+
+@media only screen and (max-width: 50em) {
+  section .content h2 {
+    font-size: 2.5em;
+  }
+}
+
+@media only screen and (max-width: 38em) {
+  section .content h2 {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  section .content h2 {
+    font-size: 1.8em;
+  }
+}
+
+section .content p {
+  color: var(--white);
+  font-size: 1.1em;
+  margin: 20px 0;
+}
+
+section .content .github {
+  color: var(--white);
+  background: var(--red);
+  font-size: 1.2em;
+  margin: 20px 0;
+  font-weight: 700;
+  padding: 8px 25px;
+  border-radius: 5px;
+  display: inline-block;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+section .content .github:hover {
+  -webkit-transform: scale(1.04) translateY(-8px);
+          transform: scale(1.04) translateY(-8px);
+}
+
+section .content .github .fa-github {
+  margin-left: 5px;
+  font-size: 22px;
+}
+
+section .copyright {
+  position: absolute;
+  bottom: 30px;
+  color: var(--white);
+  font-size: 1.1em;
+}
+
+section .copyright .copyright-by {
+  color: var(--red);
+}
+
+.menuToggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: var(--white);
+  font-size: 34px;
+  padding: 8px 15px;
+  cursor: pointer;
+  z-index: 1000;
+  background: var(--red);
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: calc(100% - 60px);
+  width: 100%;
+  height: 100%;
+  color: var(--black);
+  background: -webkit-gradient(linear, right top, left top, from(var(--background)), color-stop(90%, var(--white)));
+  background: linear-gradient(to left, var(--background), var(--white) 90%);
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.navigation.active {
+  left: 0;
+}
+
+.navigation .nav {
+  position: relative;
+  list-style: none;
+}
+
+.navigation .nav li {
+  position: relative;
+  text-align: center;
+}
+
+.navigation .nav li a {
+  font-size: 2em;
+  font-weight: 300;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.navigation .nav li a:hover {
+  color: var(--red);
+}
+
+.navigation .socialBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, var(--background)), to(var(--red)));
+  background: linear-gradient(var(--background) 60%, var(--red));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navigation .socialBar .social {
+  position: relative;
+  list-style: none;
+}
+
+.navigation .socialBar .social li {
+  position: relative;
+  text-align: center;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.navigation .socialBar .social li :hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.navigation .socialBar .social .fab {
+  font-size: 35px;
+  margin: 10px 0;
+}
+
+.navigation .socialBar .social .fa-facebook-f {
+  color: #3b5999;
+}
+
+.navigation .socialBar .social .fa-instagram {
+  color: #e4405f;
+}
+
+.navigation .socialBar .social .fa-twitter {
+  color: #55acee;
+}
