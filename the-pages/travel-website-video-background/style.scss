@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap');
+
+// Responsive Breakpoint
+$bp-largest: 88em;      //1408px
+$bp-larger: 75em;       //1200px
+$bp-large: 62em;        //992px
+$bp-medium: 50em;       //800px
+$bp-small: 40em;        //640px
+$bp-smaller: 30em;      //480px
+$bp-smallest: 25em;     //400px
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.container {
+    background: url(assets/background.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.logo {
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+    @media only screen and (max-width: $bp-small){
+        width: 200px;
+    }
+
+    @media only screen and (max-width: $bp-smaller){
+        width: 120px;
+    }
+
+    img {
+        width: 100px;
+
+        @media only screen and (max-width: $bp-smaller){
+            width: 80px;
+        }
+    }
+}
+
+.sidebar {
+    position: absolute;
+    width: 250px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .6);
+
+    @media only screen and (max-width: $bp-small){
+        width: 200px;
+    }
+
+    @media only screen and (max-width: $bp-smaller){
+        width: 120px;
+    }
+
+    .textbox {
+        transform: rotate(-90deg);
+        position: absolute;
+        top: 45%;
+        text-align: center;
+
+        @media only screen and (max-width: $bp-small){
+            left: -20px;
+            width: 250px;
+        }
+
+        @media only screen and (max-width: $bp-smaller){
+            left: -70px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 100;
+
+            @media only screen and (max-width: $bp-smaller){
+                font-size: 22px;
+            }
+        }
+
+        h4 {
+            margin: 7px 0 10px;
+
+            @media only screen and (max-width: $bp-smaller){
+                font-size: 15px;
+            }
+        }
+
+        .line {
+            width: 80px;
+            height: 1px;
+            margin: auto;
+            background: #000000;
+        }
+    }
+}
+
+.content {
+    color: #fff;
+    position: absolute;
+    right: 200px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media only screen and (max-width: $bp-larger){
+        right: 120px;
+    }
+
+    @media only screen and (max-width: $bp-larger){
+        right: 80px;
+    }
+
+    @media only screen and (max-width: $bp-medium){
+        right: 50px;
+    }
+
+    @media only screen and (max-width: $bp-small){
+        right: 20px;
+    }
+
+    h1 {
+        font-size: 70px;
+
+        @media only screen and (max-width: $bp-large){
+            font-size: 60px;
+        }
+
+        @media only screen and (max-width: $bp-medium){
+            font-size: 50px;
+        }
+
+        @media only screen and (max-width: $bp-small){
+            font-size: 35px;
+        }
+
+        @media only screen and (max-width: $bp-smaller){
+            font-size: 30px;
+        }
+    }
+
+    p {
+        color: #333;
+        font-size: 35px;
+        margin: 10px 0 40px;
+
+        @media only screen and (max-width: $bp-medium){
+            font-size: 25px;
+        }
+
+        @media only screen and (max-width: $bp-small){
+            font-size: 20px;
+        }
+
+        @media only screen and (max-width: $bp-smaller){
+            font-size: 15px;
+        }
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 170px;
+        background: #ffffff;
+        color: #000;
+        padding: 10px 0;
+        border-radius: 3px;
+        cursor: pointer;
+
+        @media only screen and (max-width: $bp-smallest){
+            padding: 8px 0;
+        }
+
+        i {
+            color: aqua;
+            font-size: 30px;
+            margin-right: 15px;
+
+            @media only screen and (max-width: $bp-smallest){
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+#backgroundVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: none;
+
+    @media (min-aspect-ratio: 16/9 ) {
+        height: auto;
+        width: 100%;
+    }
+
+    @media (max-aspect-ratio: 16/9 ) {
+        height: 100%;
+        width: auto;
+    }
+}

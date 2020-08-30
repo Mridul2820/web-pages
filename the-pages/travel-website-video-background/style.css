@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.container {
+  background: url(assets/background.png);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.logo {
+  width: 250px;
+  height: 100px;
+  position: absolute;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+}
+
+@media only screen and (max-width: 40em) {
+  .logo {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .logo {
+    width: 120px;
+  }
+}
+
+.logo img {
+  width: 100px;
+}
+
+@media only screen and (max-width: 30em) {
+  .logo img {
+    width: 80px;
+  }
+}
+
+.sidebar {
+  position: absolute;
+  width: 250px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+@media only screen and (max-width: 40em) {
+  .sidebar {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .sidebar {
+    width: 120px;
+  }
+}
+
+.sidebar .textbox {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  position: absolute;
+  top: 45%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 40em) {
+  .sidebar .textbox {
+    left: -20px;
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .sidebar .textbox {
+    left: -70px;
+  }
+}
+
+.sidebar .textbox h1 {
+  font-size: 28px;
+  font-weight: 100;
+}
+
+@media only screen and (max-width: 30em) {
+  .sidebar .textbox h1 {
+    font-size: 22px;
+  }
+}
+
+.sidebar .textbox h4 {
+  margin: 7px 0 10px;
+}
+
+@media only screen and (max-width: 30em) {
+  .sidebar .textbox h4 {
+    font-size: 15px;
+  }
+}
+
+.sidebar .textbox .line {
+  width: 80px;
+  height: 1px;
+  margin: auto;
+  background: #000000;
+}
+
+.content {
+  color: #fff;
+  position: absolute;
+  right: 200px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 75em) {
+  .content {
+    right: 120px;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  .content {
+    right: 80px;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .content {
+    right: 50px;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .content {
+    right: 20px;
+  }
+}
+
+.content h1 {
+  font-size: 70px;
+}
+
+@media only screen and (max-width: 62em) {
+  .content h1 {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .content h1 {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .content h1 {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .content h1 {
+    font-size: 30px;
+  }
+}
+
+.content p {
+  color: #333;
+  font-size: 35px;
+  margin: 10px 0 40px;
+}
+
+@media only screen and (max-width: 50em) {
+  .content p {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .content p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .content p {
+    font-size: 15px;
+  }
+}
+
+.content .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 170px;
+  background: #ffffff;
+  color: #000;
+  padding: 10px 0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 25em) {
+  .content .button {
+    padding: 8px 0;
+  }
+}
+
+.content .button i {
+  color: aqua;
+  font-size: 30px;
+  margin-right: 15px;
+}
+
+@media only screen and (max-width: 25em) {
+  .content .button i {
+    font-size: 25px;
+  }
+}
+
+#backgroundVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+@media (min-aspect-ratio: 16 / 9) {
+  #backgroundVideo {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media (max-aspect-ratio: 16 / 9) {
+  #backgroundVideo {
+    height: 100%;
+    width: auto;
+  }
+}
