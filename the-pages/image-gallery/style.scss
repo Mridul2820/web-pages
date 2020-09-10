@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@400;600&display=swap');
 
+// Responsive Breakpoint
+$bp-large-3: 88em;      //1408px
+$bp-large-2: 75em;      //1200px
+$bp-large-1: 62em;      //992px
+$bp-medium: 50em;       //800px
+$bp-small-1: 40em;      //640px
+$bp-smaller: 34em;      //544px
+$bp-small-2: 30em;      //480px
+$bp-small-3: 25em;      //400px
+
 * {
     margin: 0;
     padding: 0;
@@ -27,20 +37,32 @@ body {
     }
 
     .small-icon5 {
-        width: 25px;
+        width: 100px;
         position: absolute;
         bottom: 60px;
         left: 50px;
         opacity: .3;
+
+        @media only screen and (max-width: $bp-medium){
+            width: 130px;
+            bottom: -60px;
+            right: -50px;
+            left: unset;
+        }
     }
 }
 
 .navbar {
+    position: relative;
     width: 90%;
     height: 15vh;
     margin: auto;
     display: flex;
     align-items: center;
+
+    @media only screen and (max-width: $bp-small-2){
+        justify-content: space-between;
+    }
 
     .logo {
         width: 120px;
@@ -51,20 +73,38 @@ body {
         width: 30px;
         cursor: pointer;
         margin-left: 80px;
+
+        @media only screen and (max-width: $bp-small-1){
+            margin-left: 20px;
+        }
     }
 
     nav {
         flex: 1;
         text-align: right;
 
+        @media only screen and (max-width: $bp-small-2){
+            position: absolute;
+            bottom: 5px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 100%;
+        }
+
         ul {
             list-style: none;
 
-
             li {
-
                 display: inline-block;
                 margin-left: 60px;
+
+                @media only screen and (max-width: $bp-medium){
+                    margin-left: 25px;
+                }
+
+                @media only screen and (max-width: $bp-smaller){
+                    margin-left: 10px;
+                }
 
                 a {
                     text-decoration: none;
@@ -87,24 +127,57 @@ body {
     min-height: 85vh;
     margin: auto;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-large-1){
+        width: 90%;
+    }
+
+    @media only screen and (max-width: $bp-medium){
+        width: 70%;
+        flex-direction: column;
+    }
+
+    @media only screen and (max-width: $bp-small-1){
+        width: 80%;
+    }
 
     .col {
         margin: 20px 0;
-        flex-basis: 50%;
         min-width: 300px;
         height: 100%;
         position: relative;
     }
 
     .col-left {
+        width: 55%;
+
+        @media only screen and (max-width: $bp-large-1){
+            width: 45%;
+        }
+
+        @media only screen and (max-width: $bp-medium){
+            width: 100%;
+        }
+
         .text-box {
-            max-width: 400px;
             margin-top: 100px;
+
+            @media only screen and (max-width: $bp-medium){
+                margin-top: 0;
+            }
 
             h4 {
                 font-size: 20px;
                 color: #efc82f;
+
+                @media only screen and (max-width: $bp-small-2){
+                    font-size: 17px;
+                }
+
+                @media only screen and (max-width: $bp-small-3){
+                    font-size: 15px;
+                }
             }
 
             h1 {
@@ -112,6 +185,20 @@ body {
                 font-weight: 400;
                 letter-spacing: 3px;
                 line-height: 50px;
+
+                @media only screen and (max-width: $bp-large-1){
+                    font-size: 27px;
+                    line-height: 40px;
+                }
+
+                @media only screen and (max-width: $bp-small-2){
+                    font-size: 22px;
+                }
+
+                @media only screen and (max-width: $bp-small-3){
+                    font-size: 19px;
+                    line-height: 35px;
+                }
             }
         }
 
@@ -129,6 +216,11 @@ body {
             right: 200px;
             bottom: -100px;
             opacity: .3;
+            
+            @media only screen and (max-width: $bp-medium){
+                right: 0px;
+                bottom: 100px;
+            }
         }
 
         .small-icon3 {
@@ -138,10 +230,27 @@ body {
             top: 200px;
             opacity: .3;
             transform: rotate(45deg);
+
+            @media only screen and (max-width: $bp-medium){
+                top: 90px;
+            }
         }
     }
 
     .col-right {
+        justify-self: start;
+        align-self: center;
+        width: 45%;
+        padding-right: 50px;
+
+        @media only screen and (max-width: $bp-large-1){
+            width: 55%;
+        }
+
+        @media only screen and (max-width: $bp-medium){
+            width: 100%;
+        }
+
         .gallery-box {
             max-width: 400px;
             position: relative;
@@ -155,8 +264,12 @@ body {
             ul {
                 position: absolute;
                 right: -100px;
-                top: 50%;
+                top: calc(50% + 10px);
                 transform: translateY(-50%);
+
+                @media only screen and (max-width: $bp-small-2){
+                    right: -90px;
+                }
 
                 li {
                     position: relative;
@@ -166,6 +279,10 @@ body {
                     padding: 0 30px;
                     cursor: pointer;
                     margin-bottom: 30px;
+
+                    @media only screen and (max-width: $bp-small-2){
+                        font-size: 15px;
+                    }
 
                     &::after {
                         content: '';
