@@ -12,7 +12,7 @@ Making some web pages
 <br/>
 ◾ [Blog UI Cards](https://mridul2820.github.io/web-pages/the-pages/blog-ui-cards/index.html)
 <br/>
-◾ [Bubble Animation](https://mridul2820.github.io/web-pages/the-pages/Bubble Animation/index.html)
+◾ [Bubble Animation](https://mridul2820.github.io/web-pages/the-pages/bubble-animation/index.html)
 <br/>
 
 
@@ -48,7 +48,7 @@ Making some web pages
 
 ◾ [Travel Website Video Background](https://mridul2820.github.io/web-pages/the-pages/travel-website-video-background/index.html)
 <br/>
-◾ [Travel Website With Video Background](https://mridul2820.github.io/web-pages/the-pages/Travel Website With Video Background/index.html)
+◾ [Travel Website With Video Background](https://mridul2820.github.io/web-pages/the-pages/travel-website-with-video-background/index.html)
 <br/>
 ◾ [Urban Fashion Page](https://mridul2820.github.io/web-pages/the-pages/urban-fashion-page/index.html)
 
