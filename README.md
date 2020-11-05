@@ -44,6 +44,8 @@ Making some web pages
 <br/>
 ◾ [Save Earth Parallax Effect](https://mridul2820.github.io/web-pages/the-pages/save-earth-parallax-effect/index.html)
 <br/>
+◾ [Starbucks Landing Page](https://mridul2820.github.io/web-pages/the-pages/starbucks-landing-page/index.html)
+<br/>
 
 
 ◾ [Travel Website Video Background](https://mridul2820.github.io/web-pages/the-pages/travel-website-video-background/index.html)
