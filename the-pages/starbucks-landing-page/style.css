@@ -24,6 +24,12 @@ section {
   background: #ffffff;
 }
 
+@media only screen and (max-width: 72em) {
+  section {
+    padding: 50px;
+  }
+}
+
 .circle {
   position: absolute;
   top: 0;
@@ -33,6 +39,20 @@ section {
   background: #017143;
   -webkit-clip-path: circle(600px at right 800px);
           clip-path: circle(600px at right 800px);
+}
+
+@media only screen and (max-width: 62em) {
+  .circle {
+    -webkit-clip-path: circle(50% at 100% 100%);
+            clip-path: circle(50% at 100% 100%);
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .circle {
+    -webkit-clip-path: circle(50% at 100% 95%);
+            clip-path: circle(50% at 100% 95%);
+  }
 }
 
 header {
@@ -95,6 +115,18 @@ header ul li a {
   max-width: 600px;
 }
 
+@media only screen and (max-width: 72em) {
+  .content .text-box {
+    max-width: 520px;
+  }
+}
+
+@media only screen and (max-width: 62em) {
+  .content .text-box {
+    max-width: 470px;
+  }
+}
+
 .content .text-box h2 {
   color: #333;
   font-size: 4em;
@@ -102,10 +134,34 @@ header ul li a {
   font-weight: 500;
 }
 
+@media only screen and (max-width: 72em) {
+  .content .text-box h2 {
+    font-size: 3.5em;
+  }
+}
+
+@media only screen and (max-width: 62em) {
+  .content .text-box h2 {
+    font-size: 3em;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .content .text-box h2 {
+    font-size: 2.5em;
+  }
+}
+
 .content .text-box h2 span {
   color: #017143;
   font-size: 1.2em;
   font-weight: 900;
+}
+
+@media only screen and (max-width: 72em) {
+  .content .text-box h2 span {
+    font-size: 1.1em;
+  }
 }
 
 .content .text-box p {
@@ -132,14 +188,31 @@ header ul li a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-box-align: 50px;
-      -ms-flex-align: 50px;
-          align-items: 50px;
+  padding-right: 50px;
   margin-top: 50px;
+}
+
+@media only screen and (max-width: 62em) {
+  .content .img-box {
+    padding-right: 0;
+    margin-right: -50px;
+  }
 }
 
 .content .img-box img {
   max-width: 340px;
+}
+
+@media only screen and (max-width: 62em) {
+  .content .img-box img {
+    max-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .content .img-box img {
+    max-width: 260px;
+  }
 }
 
 .thumb {
@@ -173,27 +246,21 @@ header ul li a {
 
 .social {
   position: absolute;
-  top: 15%;
-  right: 30px;
+  bottom: 10px;
+  left: 5%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .social li {
   list-style: none;
+  padding: 0 10px;
 }
 
 .social li a {

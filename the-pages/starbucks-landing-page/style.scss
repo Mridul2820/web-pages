@@ -2,7 +2,7 @@
 
 // Responsive Breakpoint
 $bp-largest: 88em;      //1408px
-$bp-larger: 75em;       //1200px
+$bp-larger: 72em;       //1152px
 $bp-large: 62em;        //992px
 $bp-medium: 50em;       //800px
 $bp-small: 40em;        //640px
@@ -25,6 +25,10 @@ section {
     justify-content: space-between;
     align-items: center;
     background: #ffffff;
+
+    @media only screen and (max-width: $bp-larger){
+        padding: 50px;
+    }
 }
 
 .circle {
@@ -35,6 +39,14 @@ section {
     height: 100%;
     background: #017143;
     clip-path: circle(600px at right 800px);
+
+    @media only screen and (max-width: $bp-large){
+        clip-path: circle(50% at 100% 100%);
+    }
+
+    @media only screen and (max-width: $bp-medium){
+        clip-path: circle(50% at 100% 95%);
+    }
 }
 
 header {
@@ -81,16 +93,40 @@ header {
         position: relative;
         max-width: 600px;
 
+        @media only screen and (max-width: $bp-larger){
+            max-width: 520px;
+        }
+
+        @media only screen and (max-width: $bp-large){
+            max-width: 470px;
+        }
+
         h2 {
             color: #333;
             font-size: 4em;
             line-height: 1.4em;
             font-weight: 500;
 
+            @media only screen and (max-width: $bp-larger){
+                font-size: 3.5em;
+            }
+
+            @media only screen and (max-width: $bp-large){
+                font-size: 3em;
+            }
+
+            @media only screen and (max-width: $bp-medium){
+                font-size: 2.5em;
+            }
+
             span {
                 color: #017143;
                 font-size: 1.2em;
                 font-weight: 900;
+
+                @media only screen and (max-width: $bp-larger){
+                    font-size: 1.1em;
+                }
             }
         }
 
@@ -111,18 +147,35 @@ header {
         }
     }
 
+    // Main Image
+
     .img-box {
         width: 600px;
         display: flex;
         justify-content: flex-end;
-        align-items: 50px;
+        padding-right: 50px;
         margin-top: 50px;
 
-         img {
-             max-width: 340px;
-         }
+        @media only screen and (max-width: $bp-large){
+            padding-right: 0;
+            margin-right: -50px;
+        }
+
+        img {
+            max-width: 340px;
+
+            @media only screen and (max-width: $bp-large){
+                max-width: 300px;
+            }
+            
+            @media only screen and (max-width: $bp-medium){
+                max-width: 260px;
+            }
+        }
     }
 }
+
+// Bottom tumbnails
 
 .thumb {
     position: absolute;
@@ -148,19 +201,20 @@ header {
     }
 }
 
+// Social Items
+
 .social {
     position: absolute;
-    top: 15%;
-    right: 30px;
+    bottom: 10px;
+    left: 5%;
     transform: translateY(-50%);
 
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
 
     li {
         list-style: none;
+        padding: 0 10px;
 
         a {
             text-decoration: none;
