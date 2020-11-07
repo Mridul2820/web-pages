@@ -5,12 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starbucks Landing Page</title>
 
-    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="assets/logo.png">
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"/>
 </head>
 <body>
-    
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#">
+                <img src="assets/logo.png" alt="logo" class="logo">
+            </a>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </header>
+
+        <div class="content">
+            <div class="text-box">
+                <h2>It's not Just Coffee 
+                    <br> It's 
+                    <span> Starbucks</span>
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis soluta adipisci assumenda pariatur beatae at inventore qui, impedit aspernatur alias amet quaerat mollitia earum dolore tempore aperiam quae est consequatur?
+                </p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="img-box">
+                <img src="assets/img1.png" alt="main img" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li>
+                <img src="assets/thumb1.png" alt="thumb1" onclick="imgSlider('assets/img1.png'); changeCircleColor('#017143')">
+            </li>
+            <li>
+                <img src="assets/thumb2.png" alt="thumb2" onclick="imgSlider('assets/img2.png'); changeCircleColor('#eb7495')">
+            </li>
+            <li>
+                <img src="assets/thumb3.png" alt="thumb3" onclick="imgSlider('assets/img3.png'); changeCircleColor('#d752b1')">
+            </li>
+        </ul>
+
+        <ul class="social">
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
