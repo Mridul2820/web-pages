@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #09131b;
+    height: 100vh;
+    color: #fff;
+}
+
+.header {
+    background: #122331;
+    position: relative;
+    max-width: 80vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 1;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .menu-items {
+        display: flex;
+        align-items: center;
+
+        li {
+            padding: 0.5rem 1rem;
+            transition: background .3s ease-in;
+
+            &:hover {
+                background: #ff652f;
+
+                .mega-menu {
+                    top: 65px;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+// Dropdown
+.dropdown {
+    position: relative;
+
+    &:hover {
+        .dropdown-menu {
+            top: 34px;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.dropdown-menu,
+.menu-right {
+    position: absolute;
+    background: #122331;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+}
+
+.menu-right {
+    top: 0;
+    left: 110%;
+}
+
+.dropdown-right:hover .menu-right {
+    left: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+// Mega Menu
+.mega-menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 80vw;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+
+    .content {
+        background: #122331;
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        width: 100%;
+        justify-content: space-between;
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            line-height: 3rem;
+
+            .img-wrapper {
+                display: block;
+                position: relative;
+                width: 100%;
+                height: 20vw;
+                overflow: hidden;
+
+                &:hover {
+                    img {
+                        transform: scale(1.3);
+                    }
+                }
+
+                .img {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    img {
+                        width: 100%;
+                        transition: transform .3s ease-in-out;
+                    }
+                }
+            }
+
+            h2 {
+                color: #ff652f;
+                font-size: 1.2rem;
+                line-height: 3rem;
+                font-weight: bold;
+            }
+
+            p {
+                line-height: 1.2rem;
+            }
+
+            .mega-links {
+                border-left: 1px solid #1a3246;
+
+                li,
+                a {
+                    padding: 0 1rem;
+                }
+            }
+        }
+    }
+}
+
+.blog {
+    .content {
+        grid-template-columns: repeat(3, 1fr);
+
+        .col {
+            .read-more {
+                display: inline-block;
+                padding: 1rem;
+                color: #427dad;
+                transition: color .3s ease;
+
+                &:hover {
+                    color: #ff652f;
+                }
+            }
+        }
+    }
+}
+
+// Section
+.section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+        font-weight: 900;
+        line-height: 6vw;
+        color: #427dad;
+        text-transform: uppercase;
+    }
+}
+
+// 

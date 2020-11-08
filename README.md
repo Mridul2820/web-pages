@@ -32,6 +32,8 @@ Making some web pages
 <br/>
 ◾ [Login Page](https://mridul2820.github.io/web-pages/the-pages/login-page/index.html)
 <br/>
+◾ [Mega Menu](https://mridul2820.github.io/web-pages/the-pages/mega-menu/index.html)
+<br/>
 ◾ [Microsoft Homepage Clone](https://mridul2820.github.io/web-pages/the-pages/microsoft-homepage-clone/index.html)
 <br/>
 
