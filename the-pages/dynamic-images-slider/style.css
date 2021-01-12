@@ -8,6 +8,7 @@
 
 body {
   font-family: 'Roboto Condensed', sans-serif;
+  overflow-x: hidden;
 }
 
 #hero {
@@ -16,6 +17,8 @@ body {
   background-image: url("assets/fulls/01.jpg");
   background-size: cover;
   background-position: bottom;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 .navbar {
@@ -137,6 +140,7 @@ body {
   position: absolute;
   right: 30px;
   bottom: 50px;
+  width: 45%;
 }
 
 .slider .left-arrow,
@@ -154,12 +158,24 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 20px;
+  overflow-x: scroll;
+}
+
+.slider .preview::-webkit-scrollbar {
+  background: transparent;
+  height: 10px;
+}
+
+.slider .preview::-webkit-scrollbar-thumb {
+  background-color: #fff;
 }
 
 .slider .preview img {
   width: 60px;
   margin: 0 5px;
   opacity: .8;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 .slider .preview img.active {

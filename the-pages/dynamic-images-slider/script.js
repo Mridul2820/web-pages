@@ -1,7 +1,8 @@
 const prev = document.getElementById('prev');
 const next = document.getElementById('next');
 const hero = document.getElementById('hero');
-const thumb = document.querySelectorAll('.thumb');
+const thumbs = document.querySelectorAll('.thumb');
+const preview = document.querySelector('.preview');
 
 var backgroundImg = new Array (
     "assets/fulls/01.jpg",
@@ -23,17 +24,28 @@ let i = 0;
 next.addEventListener('click', () => {
     if(i < backgroundImg.length - 1) {
         hero.style.backgroundImage = 'url("'+backgroundImg[i+1]+'")';
-        thumb[i+1].classList.add('active');
-        thumb[i].classList.remove('active');
+        thumbs[i+1].classList.add('active');
+        thumbs[i].classList.remove('active');
         i++;
+
+        preview.scrollBy({
+            left: 60,
+            behavior: "smooth"
+        })
     }
 })
 
 prev.addEventListener('click', () => {
     if(i > 0) {
         hero.style.backgroundImage = 'url("'+backgroundImg[i-1]+'")';
-        thumb[i-1].classList.add('active');
-        thumb[i].classList.remove('active');
+        thumbs[i-1].classList.add('active');
+        thumbs[i].classList.remove('active');
         i--;
+        preview.scroll;
+
+        preview.scrollBy({
+            left: -60,
+            behavior: "smooth"
+        })
     }
 })
