@@ -20,6 +20,8 @@ Making some web pages
 <br/>
 ◾ [Desert Site](https://mridul2820.github.io/web-pages/the-pages/desert-site/index.html)
 <br/>
+◾ [Dynamic Images Slider](https://mridul2820.github.io/web-pages/the-pages/dynamic-images-slider/index.html)
+<br/>
 ◾ [Fullscreen Responsive Landing Page](https://mridul2820.github.io/web-pages/the-pages/fullscreen-responsive-landing-page/index.html)
 <br/>
 ◾ [Fullscreen Video Background](https://mridul2820.github.io/web-pages/the-pages/fullscreen-video-background/index.html)
