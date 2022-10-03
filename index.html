@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,40 +12,34 @@
     <title>Menu</title>
 
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
-    
+
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Open Sans Condensed', sans-serif;
         }
-
+        
         body {
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            background-image: linear-gradient(
-                rgba(0, 0, 0, 0.4), 
-                rgba(0, 0, 0, 0.4)
-                ), url(assets/coding-maestros.jpg);
+            background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(assets/4884841.jpg);
             background-position: center;
             background-size: cover;
             background-attachment: fixed;
         }
-
+        
         .searchBox {
             position: fixed;
             top: 0;
             left: 0;
             height: 10em;
             width: 100%;
-            background: url(assets/bg.png);
-            background-position: bottom;
             background-size: cover;
             z-index: 1000;
         }
@@ -59,17 +54,17 @@
             font-size: 1.5em;
             margin: 50px auto 0 auto;
         }
-
+        
         @media only screen and (max-width: 35em) {
             .search {
                 width: 300px;
             }
         }
-
+        
         .bottom-margin--small {
             margin-bottom: .5em;
         }
-
+        
         .container {
             padding: 10em 0 30em 0;
             margin: 2rem 7rem;
@@ -79,94 +74,93 @@
             justify-content: center;
             grid-gap: 1.2rem;
         }
-
+        
         @media only screen and (max-width: 70em) {
             .container {
                 margin: 2rem 6rem;
-                grid-template-columns: repeat(3, 1fr); 
-            } 
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
-
+        
         @media only screen and (max-width: 55em) {
             .container {
                 margin: 2rem 5rem;
-                grid-template-columns: repeat(2, 1fr); 
+                grid-template-columns: repeat(2, 1fr);
             }
         }
-
+        
         @media only screen and (max-width: 35em) {
             .container {
-                grid-template-columns: repeat(1, 1fr); 
+                grid-template-columns: repeat(1, 1fr);
                 margin: 2rem 3rem;
             }
         }
-
-        .container .heading{
+        
+        .container .heading {
             grid-column: span 4;
             padding: .5rem;
             font-size: 3rem;
             color: #fdd835;
         }
-
+        
         @media only screen and (max-width: 70em) {
-            .container .heading{
+            .container .heading {
                 grid-column: span 3;
-            } 
+            }
         }
-
+        
         @media only screen and (max-width: 55em) {
-            .container .heading{
+            .container .heading {
                 grid-column: span 2;
             }
         }
-
+        
         @media only screen and (max-width: 35em) {
-            .container .heading{
+            .container .heading {
                 grid-column: span 1;
             }
         }
-
+        
         .container .page {
             list-style: none;
             display: flex;
             align-items: center;
-            border: 3px solid #1b5e20;
+            border: 2px solid rgb(44, 97, 141);
+            border-radius: 4px;
             transition: all .2s;
-            background: #fffde7;
+            background: rgba(232, 239, 246, 0.978);
+            margin: 10px;
         }
-
-        .container .page:hover{
+        
+        .container .page:hover {
             transform: translateY(-5px) scale(1.05);
-            border: 3px solid #43a047;
+            border: 3px solid rgb(44, 97, 141);
         }
-
-        .container .page a{
-            font-size: 1.7em;
-            color: #43a047;
+        
+        .container .page a {
+            font-size: 1.2em;
+            color: rgb(44, 97, 141);
             text-decoration: none;
-            padding: 1rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 2rem;
             transition: all .2;
+            font-weight: 500;
         }
-
-        .container .page:hover a{
-            color: #2e7d32;
+        
+        .container .page:hover a {
+            color: rgb(44, 97, 141);
         }
-
+        
         .container a:visited {
             text-decoration: none;
         }
     </style>
 </head>
-<body>    
+
+<body>
 
     <div class="searchBox">
-        <input 
-            type="text" 
-            class="search" 
-            id="searchInput" 
-            placeholder="Search"
-            onkeyup="searchFunction()"
-        >
+        <input type="text" class="search" id="searchInput" placeholder="Search" onkeyup="searchFunction()">
     </div>
 
     <ul id="web-pages" class="container">
@@ -176,7 +170,7 @@
             <a target="_blank" href="./the-pages/ads-manager/index.html">
                 Ads Manager
             </a>
-        </li> 
+        </li>
         <li class="page">
             <a target="_blank" href="./the-pages/animated-404-page/index.html">
                 Animated 404 Page
@@ -186,7 +180,7 @@
             <a target="_blank" href="./the-pages/blog-ui-cards/index.html">
                 Blog UI Cards
             </a>
-        </li> 
+        </li>
 
         <li class="page">
             <a target="_blank" href="./the-pages/bubble-animation/index.html">
@@ -197,7 +191,7 @@
             <a target="_blank" href="./the-pages/cosmos-blog/index.html">
                 Cosmos Blog
             </a>
-        </li> 
+        </li>
 
         <li class="page">
             <a target="_blank" href="./the-pages/desert-site/index.html">
@@ -208,74 +202,74 @@
             <a target="_blank" href="./the-pages/dynamic-images-slider/index.html">
                 Dynamic Images Slider
             </a>
-        </li> 
+        </li>
 
         <li class="page">
             <a target="_blank" href="./the-pages/fullscreen-responsive-landing-page/index.html">
                 Fullscreen Responsive Landing Page
             </a>
-        </li> 
+        </li>
         <li class="page">
             <a target="_blank" href="./the-pages/fullscreen-video-background/index.html">
                 Fullscreen Video Background
             </a>
-        </li> 
+        </li>
         <li class="page">
             <a target="_blank" href="./the-pages/image-gallery/index.html">
                 Image Gallery
             </a>
-        </li> 
+        </li>
 
         <li class="page">
             <a target="_blank" href="./the-pages/image-grid-layout/index.html">
                 Image Grid Layout
             </a>
-        </li> 
+        </li>
 
         <li class="page">
             <a target="_blank" href="./the-pages/login-page/index.html">
                 Login Page
             </a>
-        </li> 
+        </li>
         <li class="page">
             <a target="_blank" href="./the-pages/mega-menu/index.html">
                 Mega Menu
             </a>
-        </li> 
+        </li>
 
         <li class="page">
             <a target="_blank" href="./the-pages/microsoft-homepage-clone/index.html">
                 Microsoft Homepage Clone
             </a>
-        </li> 
+        </li>
 
         <li class="page">
             <a target="_blank" href="./the-pages/netflix-landing-page-clone/index.html">
                 Netflix Landing Page Clone
             </a>
-        </li> 
+        </li>
 
         <li class="page">
             <a target="_blank" href="./the-pages/portfolio-1/index.html">
                 Portfolio 1
             </a>
-        </li> 
+        </li>
         <li class="page">
             <a target="_blank" href="./the-pages/responsive-homepage/index.html">
                 Responsive Homepage
             </a>
-        </li> 
+        </li>
 
         <li class="page">
             <a target="_blank" href="./the-pages/save-earth-parallax-effect/index.html">
                 Save Earth Parallax Effect
             </a>
-        </li> 
+        </li>
         <li class="page">
             <a target="_blank" href="./the-pages/starbucks-landing-page/index.html">
                 Starbucks Landing Page
             </a>
-        </li> 
+        </li>
 
         <li class="page">
             <a target="_blank" href="./the-pages/travel-website-video-background/index.html">
@@ -291,9 +285,9 @@
             <a target="_blank" href="./the-pages/urban-fashion-page/index.html">
                 Urban Fashion Page
             </a>
-        </li>  
+        </li>
 
-        
+
 
 
         <!-- 
@@ -303,33 +297,33 @@
             <li class="page"><a target="_blank" href="./the-pages/"></a></li> 
             <li class="page"><a target="_blank" href="./the-pages/"></a></li> 
         -->
-        
+
     </ul>
 
-<script type="text/javascript">
-    function searchFunction() {
-    
-        var searchInput = document.getElementById('searchInput');
+    <script type="text/javascript">
+        function searchFunction() {
 
-        var filter = searchInput.value.toUpperCase();
-        
-        var pages = document.getElementById('web-pages');
-        var page = pages.getElementsByTagName('li');
-    
-        // Loop through all list items, and hide those who don't match the search query
-        for (i = 0; i < page.length; i++) {
-            var a = page[i].getElementsByTagName("a")[0];
-            var txtValue = a.textContent || a.innerText;
+            var searchInput = document.getElementById('searchInput');
 
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                page[i].style.display = "";
-            } 
-            else {
-                page[i].style.display = "none";
+            var filter = searchInput.value.toUpperCase();
+
+            var pages = document.getElementById('web-pages');
+            var page = pages.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < page.length; i++) {
+                var a = page[i].getElementsByTagName("a")[0];
+                var txtValue = a.textContent || a.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    page[i].style.display = "";
+                } else {
+                    page[i].style.display = "none";
+                }
             }
         }
-    }
-</script>
+    </script>
 
-</body> 
+</body>
+
 </html>
